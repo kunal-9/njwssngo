@@ -1,1 +1,1 @@
-web: gunicorn kunal.wsgi --log-file -
+web: waitress-serve --listen=*:8000 kunal.wsgi:application
