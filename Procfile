@@ -1,1 +1,1 @@
-web: gunicorn kunal.wsgi
+web: waitress-serve --listen=*:8000 kunal.wsgi:application
