@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +27,7 @@ SECRET_KEY = 'di5hvd0d4wo_9hg38&#^%@&y6re6p34vm*43tv$=qm7dmfu-jl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['njwssngo.herokuapp.com', '127.0.0.1', 'desktop-1k1q0dt']
+ALLOWED_HOSTS = ['njwssngo.herokuapp.com', '127.0.0.1','0.0.0.0' 'desktop-1k1q0dt' ,'localhost:8000']
 
 
 # Application definition
@@ -84,7 +86,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': '7276',
         'HOST': 'localhost',
-        'PORT': 5432,
+        
     }
 }
 
@@ -135,19 +137,4 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT=os.path.join(BASE_DIR,'asset')
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-             'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
-        },
-    },
-}
 
