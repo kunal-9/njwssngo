@@ -29,6 +29,12 @@ def contacts(request):
 def home(request):
     return render(request , "index.html")
 
+def gallery(request):
+    return render(request , "gallery.html")
+
+def team(request):
+    return render(request , "ourteam.html")
+
            
 def donate(request):
     if request.method == 'POST':
